@@ -28,7 +28,7 @@ namespace StaffRecords
             Password = password;
             Department = department;
             Role = role;
-            DateCreated = DateTime.Now;
+            DateCreated = dateCreated;
 
             List<Employees> employee = new List<Employees>();
             employee.Add(new Employees(empolyee_ID, firstName, lastName, email, password, department, role, dateCreated));

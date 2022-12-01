@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Transactions;
 
 namespace StaffRecords
 {
     internal class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
+
         {
             Console.WriteLine("Welcome To Havilla Secondary School");
             int choice = 1;
@@ -15,9 +18,49 @@ namespace StaffRecords
             Console.WriteLine("\n.................Empolyee Managment System.................\n\n");
             Console.WriteLine("Welcome To Main Menu, Please Enter Your Choice\n Press 1 for Non-Academic Staff or Press 2 for Academic Staff" );
             Console.WriteLine("Press 2 to exit Program");
+            Console.WriteLine();
+            string principalRole = "Pricipal Role";
+            string role = principalRole;
+
+            string key = Console.ReadLine();
+            Console.Clear();
+            int DepartmentOption = Convert.ToInt32(key);
+
+            if (DepartmentOption== 1)
+            {
+                if (choice == 1)
+                {
+                    
+                    Console.WriteLine("Enter Firstname");
+                    string firstname = Console.ReadLine();
+                    Console.WriteLine();
+                    Console.Clear();
+
+                    
+                    Console.WriteLine("Enter SeconName");
+                    string Secondtname = Console.ReadLine();
+                    Console.WriteLine();
+                    Console.Clear();
+
+                    
+                    Console.WriteLine("Enter Email");
+                    string email = Console.ReadLine();
+                    Console.WriteLine();
+                    Console.Clear();
+
+                    Console.WriteLine("Enter Password");
+                    string Password = Console.ReadLine();
+                    Console.Clear();
+
+                   
+                           
+                    
+                }
+            }
 
             Console.Write("\nEnter Your Choice : ");
             string input = Console.ReadLine();
+
 
             while (true)
             {
@@ -72,9 +115,9 @@ namespace StaffRecords
                                     Console.Write("Enter Role : ");
                                     string Role = Console.ReadLine();
                                     Console.Write("Enter DateCreated : ");
-                                    DateTime DateCreated = DateTime.Now;
+                                    DateTime dateCreated = DateTime.Today;
 
-                                    Employees emps = new Employees(Employee_Id, firstName, secondName, Email, Password, Department, Role, DateCreated);
+                                    Employees emps = new Employees(Employee_Id, firstName, secondName, Email, Password, Department, Role, dateCreated);
 
                                     //Employees.Add_Employee(employee);
 

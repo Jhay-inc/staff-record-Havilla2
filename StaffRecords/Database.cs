@@ -31,7 +31,7 @@ namespace StaffRecords
             employee.Add(new Employees(employee_ID, firstName, lastName, email, password, department, role, DateTime.Now));
         }
 
-        Employees employees = new Employees();
+        Database employees = new Database();
 
 
     }
