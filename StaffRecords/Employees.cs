@@ -17,8 +17,9 @@ namespace StaffRecords
         public string Department { get; set; }
         public string Role { get; set; }
         public DateTime DateCreated { get; set; }
+        public string SecondName { get; }
+        public string DateCreated1 { get; }
 
-        
         public Employees(int empolyee_ID, string firstName, string lastName, string email, string password, string department, string role, DateTime dateCreated)
         {
             Empolyee_ID = empolyee_ID;
@@ -39,8 +40,18 @@ namespace StaffRecords
 
         }
 
-        public Employees()
+        public Employees(int employee_Id, string firstName)
         {
+        }
+
+        public Employees(int employee_Id, string firstName, string secondName, string email, string password, string department, string role, string dateCreated) : this(employee_Id, firstName)
+        {
+            SecondName = secondName;
+            Email = email;
+            Password = password;
+            Department = department;
+            Role = role;
+            DateCreated1 = dateCreated;
         }
 
 
